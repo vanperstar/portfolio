@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 
 function Login() {
   const usernameRef = useRef()
-  const passwordRef = useRef()
+  const contactRef = useRef()
 
   const logUser = async (e) => {
     e.preventDefault()
     try {
       const userData = await axios.post('/login', {
         username: usernameRef.current.value,
-        password: passwordRef.current.value,
+        password: contactRef.current.value,
       })
       console.log(userData.data);
       localStorage.setItem('token', userData.data.data.token)
@@ -24,11 +24,6 @@ function Login() {
     } catch (error) {
       console.log(error);
     }
-  }
-
-
-  if(window.localStorage.getItem('token')){
-    window.location.href = '/'
   }
 
   return (
@@ -46,8 +41,8 @@ function Login() {
               </Link>
             </div>
             <form onSubmit={logUser}>
-              <input ref={usernameRef} type="text" name="Username" placeholder="Username" />
-              <input ref={passwordRef} type="password" name="Password" placeholder="Password" />
+              <input required ref={usernameRef} type="text" name="Username" placeholder="Username" />
+              <input required ref={contactRef} type="text" name="Contact" placeholder="Contact" />
               <label>
                 <input type="checkbox" name="" />
                 Remmebr me

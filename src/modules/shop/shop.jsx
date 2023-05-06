@@ -7,6 +7,11 @@ import sheep from './img/sheep.png'
 import search from './img/search.png'
 
 function Shop() {
+
+    if(!localStorage.getItem('token')){
+        window.location.href = '/login'
+    }
+
     return (
         <div className="container">
             <Header />
