@@ -1,0 +1,137 @@
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 110px;
+}
+
+.home{
+    margin-top: 10%;
+    justify-content: space-between;
+}
+
+.home_world{
+    display: flex;
+}
+
+
+.home_world > div > h2{
+    width: 50%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 70px;
+    
+    color: #121212;
+}
+
+.home_world > div > p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    
+    color: #838383;
+}
+
+.home_world  div  button{
+    background: #FF8F52;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.home_img{
+    width: 50%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.best_selers{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+
+
+
+.let_post{
+    margin-bottom: 10%;
+}
+
+.let_post h2{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    position: relative;
+}
+
+.let_post h2::after{
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 0px;
+    border: 2px solid #bbbbbb;
+    align-items: center;
+    bottom: 40%;
+    right: 25%;
+}
+
+
+.let_post h2::before{
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 0px;
+    border: 2px solid #bbbbbb;
+    align-items: center;
+    bottom: 40%;
+    left: 25%;
+}
+
+
+.comments{
+    margin-bottom: 10%;
+}
+
+.comments h2{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    position: relative;
+}
+
+.comments h2::after{
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 0px;
+    border: 2px solid #bbbbbb;
+    align-items: center;
+    bottom: 40%;
+    right: 25%;
+}
+
+.comments h2::before{
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 0px;
+    border: 2px solid #bbbbbb;
+    align-items: center;
+    bottom: 40%;
+    left: 25%;
+}
+

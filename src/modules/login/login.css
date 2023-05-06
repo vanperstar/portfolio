@@ -1,0 +1,100 @@
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 110px;
+}
+
+/* .login{
+    height: 1vh;
+} */
+
+.log_home{
+    display: flex;
+}
+.log_home> img{
+    width: 33%;
+    height: 535px;
+    transform: translate(-55%, 15%);
+}
+
+.log_main{
+    margin: 80px 200px;
+    width: 35%;
+    background: #FFFFFF;
+    padding-bottom: 50px;
+}
+
+.log_more{
+    display: flex;
+    align-items: center;
+}
+.log_more > div{
+    margin: 30px 40px;
+}
+
+.home_link{
+    margin-left: 5%;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+.log_main > form{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.log_main > form > input{
+    width: 70%;
+    margin: auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+}
+
+.log_main > form > label{
+    width: 70%;
+    margin: auto;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.log_main > form > button{
+    width: 70%;
+    margin: auto;
+    padding: 15px 20px;
+    background: #FF8F52;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.log_main > p{
+    margin-left: 15%;
+}
+
+.log_main > p > a{
+    text-decoration: none;
+    color: #FF8F52;
+}
+
+
+
+@media screen and (max-width: 1335px) {
+    .log_home> img{
+        width: 33%;
+        height: 535px;
+        transform: translate(-60%, 15%);
+    }
+
+    .log_main{
+        margin: 80px 150px;
+        width: 50%;
+        padding-bottom: 31px;
+    }
+}

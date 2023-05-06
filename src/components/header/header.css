@@ -1,0 +1,49 @@
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 110px;
+}
+
+.header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 2;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+}
+.logo > span{
+    color: #FF8F52;
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navbar > li > a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000; 
+}
+
+.navbar > li > a:active{
+    color: #FF8F52;
+}

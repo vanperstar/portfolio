@@ -1,0 +1,91 @@
+
+
+.sler_cards{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.best_selers h2{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    position: relative;
+}
+
+.best_selers h2::after{
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 0px;
+    border: 2px solid #bbbbbb;
+    align-items: center;
+    bottom: 40%;
+    right: 25%;
+}
+.best_selers h2::before{
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 0px;
+    border: 2px solid #bbbbbb;
+    align-items: center;
+    bottom: 40%;
+    left: 25%;
+}
+
+.best_card{
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 20%;
+    padding: 15px 15px 0px 15px;
+}
+
+.best_card img{
+    width: 100%;
+}
+
+.best_card h4{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0;
+}
+
+.best_card div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;  
+}
+
+.best_card div p{
+    color: #838383;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.link{
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FF8F52;
+    align-items: center;
+}
+
+
+.korzina{
+    margin-right: 10px;
+    width: 20px !important;
+}

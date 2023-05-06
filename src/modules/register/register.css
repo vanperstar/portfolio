@@ -1,0 +1,86 @@
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 110px;
+}
+
+.register{
+    margin-top: 2%;
+}
+
+.reg_home{
+    display: flex;
+    position: relative;
+}
+.reg_home> img{
+    position: absolute;
+    width: 30%;
+    height: 97%;
+    right: 20.5%;
+    top: 1.6%;
+}
+
+.reg_main{
+    margin: 10px 200px;
+    width: 35%;
+    background: #FFFFFF;
+    padding-bottom: 20px;
+}
+
+.reg_more{
+    display: flex;
+    align-items: center;
+}
+.reg_more > div{
+    margin: 30px 40px;
+}
+
+.home_link{
+    margin-left: 5%;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+.reg_main > form{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.reg_main > form > input{
+    width: 70%;
+    margin: auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+}
+
+.reg_main > form > label{
+    width: 70%;
+    margin: auto;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.reg_main > form > button{
+    width: 70%;
+    margin: auto;
+    padding: 15px 20px;
+    background: #FF8F52;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.reg_main > p{
+    margin-left: 15%;
+}
+
+.reg_main > p > a{
+    text-decoration: none;
+    color: #FF8F52;
+}
