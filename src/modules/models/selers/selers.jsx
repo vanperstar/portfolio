@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+// import axios from "../../../api/axios";
 import "./selers.css";
 import daisy from "./img/daisy.png";
 import korzina from "./img/korzina.png";
@@ -7,6 +8,9 @@ import white_rose from "./img/white_rose.png";
 import periwinkle from "./img/periwinkle.png";
 
 function Selers() {
+
+  // const getFlower = async ()
+
   return (
       <div className="sler_cards">
         <div className="best_card">

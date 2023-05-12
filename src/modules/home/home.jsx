@@ -52,7 +52,6 @@ function Home() {
             <Comments />
         </div>
       </div>
-
       <Footer />
     </div>
   );
