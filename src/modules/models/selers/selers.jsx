@@ -4,7 +4,7 @@ import "./selers.css";
 import korzina from "./img/korzina.png";
 import axios from "../../../api/axios";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode, Pagination, Mousewheel } from "swiper";
 
 function Selers() {
   const [data, setData] = useState([]);
@@ -27,14 +27,15 @@ function Selers() {
 
   return (
     <Swiper
-      spaceBetween={25}
+      spaceBetween={30}
       slidesPerView={4}
+      mousewheel={true}
       freeMode={true}
       centeredSlides={true}
       pagination={{
         type: 'fraction'
       }}
-      modules={[FreeMode, Pagination]}
+      modules={[FreeMode, Pagination, Mousewheel]}
       className="sler_cards"
     >
       {data.map((res) => {

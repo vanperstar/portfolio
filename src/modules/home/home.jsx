@@ -10,7 +10,6 @@ import home_3 from "./img/home_3.png";
 import home_4 from "./img/home_4.png";
 import home_5 from "./img/home_5.png";
 import home_6 from "./img/home_6.png";
-import CardCarousel from "../models/carusel/carusel";
 
 
 function Home() {
@@ -51,9 +50,6 @@ function Home() {
         <div className="comments">
           <h2>Comments</h2>
             <Comments />
-        </div>
-        <div>
-          <CardCarousel/>
         </div>
       </div>
       <Footer />
