@@ -5,6 +5,9 @@ import korzina from "./img/korzina.png";
 import axios from "../../../api/axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Mousewheel } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 function Selers() {
   const [data, setData] = useState([]);

@@ -11,7 +11,6 @@ import home_4 from "./img/home_4.png";
 import home_5 from "./img/home_5.png";
 import home_6 from "./img/home_6.png";
 
-
 function Home() {
 
   if(!window.localStorage.getItem('token')){
