@@ -16,12 +16,15 @@
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "googleapis": "^118.0.0",
+    "i": "^0.3.7",
+    "npm": "^9.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.3",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
-    "styled-components": "^5.3.10"
+    "styled-components": "^5.3.10",
+    "swiper": "^9.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

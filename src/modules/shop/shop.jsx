@@ -24,8 +24,6 @@ function Shop() {
             </div>
 
             <Selers />
-            <Selers />
-            <Selers />
             <Footer />
         </div>
     )

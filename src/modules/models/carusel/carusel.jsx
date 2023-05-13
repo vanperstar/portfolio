@@ -1,49 +1,43 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { FreeMode, Pagination } from 'swiper'
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 function CardCarousel() {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-  <Carousel
-    swipeable={false}
-    draggable={false}
-    showDots={true}
-    responsive={responsive}
-    ssr={true} // means to render carousel on server-side.
-    infinite={true}
-    autoPlay={this.props.deviceType !== "mobile" ? true : false}
-    autoPlaySpeed={1000}
-    keyBoardControl={true}
-    customTransition="all .5"
-    transitionDuration={500}
-    containerClass="carousel-container"
-    removeArrowOnDeviceType={["tablet", "mobile"]}
-    deviceType={this.props.deviceType}
-    dotListClass="custom-dot-list-style"
-    itemClass="carousel-item-padding-40-px"
-  >
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-    <div>Item 4</div>
-  </Carousel>;
+    return (
+        <Swiper
+          slidePrevClass={4}
+          spaceBetween = {20}
+          freeMode = {true}
+          pagination={{
+            clickable: true,
+          }}
+          modules = {[FreeMode, Pagination]}
+          className = "mySwiper"
+          >
+            
+            <SwiperSlide>
+              <div>
+                <h2>hello </h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque magnam temporibus beatae adipisci quia, officiis ipsa? Ratione saepe, consequuntur harum impedit aperiam magnam. Architecto laborum voluptates consequuntur corrupti impedit est.</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <h2>hello2 </h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque magnam temporibus beatae adipisci quia, officiis ipsa? Ratione saepe, consequuntur harum impedit aperiam magnam. Architecto laborum voluptates consequuntur corrupti impedit est.</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <h2>hello3 </h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque magnam temporibus beatae adipisci quia, officiis ipsa? Ratione saepe, consequuntur harum impedit aperiam magnam. Architecto laborum voluptates consequuntur corrupti impedit est.</p>
+              </div>
+            </SwiperSlide>
+
+        </Swiper>
+    )
 }
 
 export default CardCarousel
