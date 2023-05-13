@@ -5,9 +5,6 @@ import korzina from "./img/korzina.png";
 import axios from "../../../api/axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";
-// import "swiper/css";
-// import "swiper/css/free-mode";
-// import "swiper/css/pagination";
 
 function Selers() {
   const [data, setData] = useState([]);
@@ -32,9 +29,10 @@ function Selers() {
     <Swiper
       spaceBetween={25}
       slidesPerView={4}
-      // freeMode={true}
+      freeMode={true}
+      centeredSlides={true}
       pagination={{
-        clickable: true,
+        type: 'fraction'
       }}
       modules={[FreeMode, Pagination]}
       className="sler_cards"
@@ -43,7 +41,7 @@ function Selers() {
         return (
           <SwiperSlide style={{width: '0px'}} key={res.id}>
             <div className="best_card">
-            <img src={"http://localhost:5000/" + res.img_link} alt="" />
+            <img className="card_img" src={"http://localhost:5000/" + res.img_link} alt="" />
             <h4>{res.name}</h4>
             <div>
               <p>{res.price}</p>

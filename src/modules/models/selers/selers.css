@@ -43,8 +43,9 @@
     padding: 15px 15px 0px 15px;
 }
 
-.best_card img{
+.card_img{
     width: 100%;
+    height: 35vh;
 }
 
 .best_card h4{
