@@ -25,10 +25,10 @@ function Footer() {
               <Link to={'/'}>Home</Link>
             </li>
             <li>
-              <Link to={'shop'}>Shop</Link>
+              <Link to={'/shop'}>Shop</Link>
             </li>
             <li>
-              <Link to={'about'}>About</Link>
+              <Link to={'/about'}>About</Link>
             </li>
             <li>
               <Link to={'/login'}>Login</Link>

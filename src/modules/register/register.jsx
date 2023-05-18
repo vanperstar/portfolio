@@ -21,12 +21,13 @@ function Register() {
         });
         console.log(userData.data);
         localStorage.setItem('token', userData.data.data.token)
+        localStorage.setItem('username', usernameRef.current.value)
+        localStorage.setItem('contact', contactRef.current.value)
         if(window.localStorage.getItem('token')) {
           window.location.href = '/'
         }
-      
     } catch (error) {
-      console.error(error);
+      alert(error);
     }
   };
 

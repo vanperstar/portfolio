@@ -43,7 +43,7 @@ function Selers() {
     >
       {data.map((res) => {
         return (
-          <SwiperSlide style={{width: '0px'}} key={res.id}>
+          <SwiperSlide key={res.product_id}>
             <div className="best_card">
             <img className="card_img" src={"http://localhost:5000/" + res.img_link} alt="" />
             <h4>{res.name}</h4>

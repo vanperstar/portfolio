@@ -3,6 +3,7 @@ import Register from "./modules/register/register";
 import Home from "./modules/home/home";
 import Shop from "./modules/shop/shop";
 import { Routes, Route } from 'react-router-dom'
+import Cart from "./modules/models/cart/cart";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/login" element={<Login />}/> 
       <Route path="/register" element={<Register/>}/>
       <Route path="/shop" element={<Shop/>}/>
+      <Route path="/cart" element={<Cart/>}/>
 
     </Routes>
     </>

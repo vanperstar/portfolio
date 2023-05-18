@@ -6,25 +6,27 @@ import login from "./img/login.png";
 import { Link } from "react-router-dom";
 
 function Login() {
-  const usernameRef = useRef()
-  const contactRef = useRef()
+  const usernameRef = useRef();
+  const contactRef = useRef();
 
   const logUser = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      const userData = await axios.post('/login', {
+      const userData = await axios.post("/login", {
         username: usernameRef.current.value,
-        password: contactRef.current.value,
-      })
-      console.log(userData.data);
-      localStorage.setItem('token', userData.data.data.token)
-      if(window.localStorage.getItem('token')) {
-        window.location.href = '/'
+        contact: contactRef.current.value,
+      });
+      localStorage.setItem("token", userData.data.data.token);
+      localStorage.setItem("username", usernameRef.current.value);
+      localStorage.setItem("contact", contactRef.current.value);
+      // console.log(userData.data.data.token);
+      if (window.localStorage.getItem("token")) {
+        window.location.href = "/";
       }
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
-  }
+  };
 
   return (
     <div className="login">
@@ -41,8 +43,20 @@ function Login() {
               </Link>
             </div>
             <form onSubmit={logUser}>
-              <input required ref={usernameRef} type="text" name="Username" placeholder="Username" />
-              <input required ref={contactRef} type="text" name="Contact" placeholder="Contact" />
+              <input
+                required
+                ref={usernameRef}
+                type="text"
+                name="Username"
+                placeholder="Username"
+              />
+              <input
+                required
+                ref={contactRef}
+                type="text"
+                name="Contact"
+                placeholder="Contact"
+              />
               <label>
                 <input type="checkbox" name="" />
                 Remmebr me
