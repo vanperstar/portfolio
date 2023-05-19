@@ -71,6 +71,7 @@ function Cart() {
               type="text"
               name="count"
               placeholder="Count"
+              required
             />
             <button type="submit">Buyurtma berish</button>
           </form>
