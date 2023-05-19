@@ -3,34 +3,36 @@ import { useRef } from "react";
 import axios from "../../api/axios";
 import { Link } from "react-router-dom";
 import home from "./img/home.png";
+// import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import register from "./img/register.png";
 
 function Register() {
+  // const notify = () => toast("error");
   const emailRef = useRef();
   const usernameRef = useRef();
   const passwordRef = useRef();
   const contactRef = useRef();
   const addUsers = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-        const userData = await axios.post("/register", {
-          email: emailRef.current.value,
-          username: usernameRef.current.value,
-          password: passwordRef.current.value,
-          contact: contactRef.current.value,
-        });
-        console.log(userData.data);
-        localStorage.setItem('token', userData.data.data.token)
-        localStorage.setItem('username', usernameRef.current.value)
-        localStorage.setItem('contact', contactRef.current.value)
-        if(window.localStorage.getItem('token')) {
-          window.location.href = '/'
-        }
+      const userData = await axios.post("/register", {
+        email: emailRef.current.value,
+        username: usernameRef.current.value,
+        password: passwordRef.current.value,
+        contact: contactRef.current.value,
+      });
+      console.log(userData.data);
+      localStorage.setItem("token", userData.data.data.token);
+      localStorage.setItem("username", usernameRef.current.value);
+      localStorage.setItem("contact", contactRef.current.value);
+      if (window.localStorage.getItem("token")) {
+        window.location.href = "/";
+      }
     } catch (error) {
       alert(error);
     }
   };
-
   return (
     <div className="register">
       <div className="container">
@@ -75,7 +77,9 @@ function Register() {
                   with registering your accepting our terms and privacy policy
                 </p>
               </label>
-              <button id="register" type="submit">Register</button>
+              <button id="register" type="submit">
+                Register
+              </button>
             </form>
             <p>
               Already have an account? <Link to={"/login"}>Login</Link>
