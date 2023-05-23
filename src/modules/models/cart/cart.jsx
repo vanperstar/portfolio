@@ -1,5 +1,6 @@
-import Header from '../../../components/header/header'
+import Header from "../../../components/header/header";
 import { useEffect, useState, useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import axios from "../../../api/axios";
 import Order from "../order/order";
 import "./cart.css";
@@ -29,6 +30,7 @@ function Cart() {
       window.removeEventListener("load", getOrder);
     };
   }, [data]);
+
   const addProduct = async (e) => {
     e.preventDefault();
     try {
@@ -36,7 +38,7 @@ function Cart() {
         "/orders",
         {
           product_id: flowerRef.current.id * 1,
-          count: countRef.current.value * 1 
+          count: countRef.current.value * 1,
         },
         {
           headers: {
@@ -44,7 +46,11 @@ function Cart() {
           },
         }
       );
-      alert(productData.data.message);
+      toast.success(productData.data.message, {
+        position: "top-center",
+        theme: "colored",
+      });
+      // alert(productData.data.message);
     } catch (error) {
       console.log(error);
     }
@@ -52,7 +58,7 @@ function Cart() {
 
   return (
     <div className="container">
-      <Header/>
+      <Header />
       <div className="cart">
         <h4>You cart</h4>
         <div className="you_cart">
@@ -60,7 +66,11 @@ function Cart() {
             <select>
               {data.map((res) => {
                 return (
-                  <option id={res.product_id} ref={flowerRef} key={res.product_id}>
+                  <option
+                    id={res.product_id}
+                    ref={flowerRef}
+                    key={res.product_id}
+                  >
                     {res.name}
                   </option>
                 );
@@ -77,6 +87,7 @@ function Cart() {
           </form>
         </div>
       </div>
+      <ToastContainer />
       <h2>Zakaz berilganlari</h2>
       <Order />
     </div>

@@ -3,12 +3,11 @@ import { useRef } from "react";
 import axios from "../../api/axios";
 import { Link } from "react-router-dom";
 import home from "./img/home.png";
-// import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import register from "./img/register.png";
 
 function Register() {
-  // const notify = () => toast("error");
   const emailRef = useRef();
   const usernameRef = useRef();
   const passwordRef = useRef();
@@ -22,15 +21,20 @@ function Register() {
         password: passwordRef.current.value,
         contact: contactRef.current.value,
       });
-      console.log(userData.data);
-      localStorage.setItem("token", userData.data.data.token);
+      if(userData.data.data?.status != 200) {
+        toast.error(userData.data?.message, {
+          position: "top-center",
+          theme: "colored"
+        })
+        localStorage.setItem("token", userData.data.data.token);
+      }
       localStorage.setItem("username", usernameRef.current.value);
       localStorage.setItem("contact", contactRef.current.value);
       if (window.localStorage.getItem("token")) {
         window.location.href = "/";
       }
     } catch (error) {
-      alert(error);
+      console.log(error);
     }
   };
   return (
@@ -77,10 +81,9 @@ function Register() {
                   with registering your accepting our terms and privacy policy
                 </p>
               </label>
-              <button id="register" type="submit">
-                Register
-              </button>
+              <button type="submit">Register</button>
             </form>
+            <ToastContainer />
             <p>
               Already have an account? <Link to={"/login"}>Login</Link>
             </p>

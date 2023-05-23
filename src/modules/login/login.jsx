@@ -1,6 +1,7 @@
 import "./login.css";
 import { useRef } from "react";
 import axios from "../../api/axios";
+import { ToastContainer, toast } from "react-toastify";
 import home from "./img/home.png";
 import login from "./img/login.png";
 import { Link } from "react-router-dom";
@@ -16,15 +17,21 @@ function Login() {
         username: usernameRef.current.value,
         contact: contactRef.current.value,
       });
-      localStorage.setItem("token", userData.data.data.token);
+      console.log(userData);
+      if (userData.data.data?.status != 200) {
+        toast.error(userData.data?.message, {
+          position: "top-center",
+          theme: "colored",
+        });
+        localStorage.setItem("token", userData.data.data.token);
+      }
       localStorage.setItem("username", usernameRef.current.value);
       localStorage.setItem("contact", contactRef.current.value);
-      // console.log(userData.data.data.token);
       if (window.localStorage.getItem("token")) {
         window.location.href = "/";
       }
     } catch (error) {
-      alert(error);
+      console.log(error);
     }
   };
 
@@ -63,6 +70,7 @@ function Login() {
               </label>
               <button type="submit">Login</button>
             </form>
+            <ToastContainer/>
             <p>
               dont have an account? <Link to={"/register"}>Register</Link>
             </p>

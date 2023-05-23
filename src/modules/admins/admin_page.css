@@ -1,0 +1,49 @@
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 110px;
+}
+
+.admin_page{
+    margin-top: 10%;
+}
+
+.admin_page_add{
+    margin-bottom: 5%;
+}
+
+.addForm{
+    padding: 10px;
+    background-color: #fff;
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+.addForm input{
+    margin: auto;
+    width: 50%;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.addForm select {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.addForm button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8F52;
+    padding: 10px;
+    cursor: pointer;
+    width: 40%;
+    margin: auto;
+    color: #fff;
+}
