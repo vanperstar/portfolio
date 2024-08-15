@@ -9,9 +9,9 @@ function Cart() {
   const flowerRef = useRef();
   const countRef = useRef();
 
-  if (!window.localStorage.getItem("token")) {
-    window.location.href = "/login";
-  }
+  // if (!window.localStorage.getItem("token")) {
+  //   window.location.href = "/login";
+  // }
 
   const [data, setData] = useState([]);
 
@@ -63,7 +63,13 @@ function Cart() {
         <h4>You cart</h4>
         <div className="you_cart">
           <form onSubmit={addProduct}>
-            <select>
+          <select>
+              <option>Daisy</option>
+              <option>Periwinkle</option>
+              <option>Sun flower</option>
+              <option>White Rose</option>
+            </select>
+            {/* <select>
               {data.map((res) => {
                 return (
                   <option
@@ -75,7 +81,7 @@ function Cart() {
                   </option>
                 );
               })}
-            </select>
+            </select> */}
             <input
               ref={countRef}
               type="text"

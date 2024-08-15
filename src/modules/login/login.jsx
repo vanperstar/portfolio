@@ -27,9 +27,9 @@ function Login() {
       }
       localStorage.setItem("username", usernameRef.current.value);
       localStorage.setItem("contact", contactRef.current.value);
-      if (window.localStorage.getItem("token")) {
-        window.location.href = "/";
-      }
+      // if (window.localStorage.getItem("token")) {
+      //   window.location.href = "/";
+      // }
     } catch (error) {
       console.log(error);
     }

@@ -13,9 +13,9 @@ import home_6 from "./img/home_6.png";
 
 function Home() {
 
-  if(!window.localStorage.getItem('token')){
-    window.location.href = '/login'
-  }
+  // if(!window.localStorage.getItem('token')){
+  //   window.location.href = '/login'
+  // }
 
   return (
     <div className="container">

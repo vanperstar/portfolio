@@ -8,9 +8,9 @@ function Header() {
     <div className="header">
       <div className=" container">
         <div className="nav">
-          <h2 className="logo">
+          <Link to={'/'} style={{textDecoration: "none"}} className="logo">
             <span>Flower</span> Shop
-          </h2>
+          </Link>
 
           <ul className="navbar">
             <li>
